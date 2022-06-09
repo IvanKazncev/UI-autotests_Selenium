@@ -5,7 +5,7 @@ import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import pageObject.*;
+import po.*;
 import steps.StepToDeleteUser;
 
 import static com.codeborne.selenide.Selenide.open;

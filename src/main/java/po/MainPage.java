@@ -1,10 +1,10 @@
-package pageObject;
+package po;
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import java.time.Duration;
 import java.util.List;
-import static com.codeborne.selenide.Condition.visible;
 
 public class MainPage {
 
@@ -62,7 +62,7 @@ public class MainPage {
 
         //check if a bun ingredient is displayed
         public Boolean isBunBurgerIngredientVisible() {
-            return burgerIngredients.get(0) .shouldBe(visible, Duration.ofSeconds(10)).is(visible);
+            return burgerIngredients.get(0) .shouldBe(Condition.visible, Duration.ofSeconds(10)).is(Condition.visible);
         }
 
         //check if a sauce ingredient is displayed
@@ -73,23 +73,23 @@ public class MainPage {
         //check if a filling ingredient is displayed
         public Boolean isFillingBurgerIngredientVisible() {
 
-            return burgerIngredients.get(2).shouldBe(visible, Duration.ofSeconds(5)).isDisplayed();
+            return burgerIngredients.get(2).shouldBe(Condition.visible, Duration.ofSeconds(5)).isDisplayed();
         }
 
         //click on private account element locator
         public void privateAccountElementClick () {
-            privateAccountElement.shouldBe(visible, Duration.ofSeconds(7));
+            privateAccountElement.shouldBe(Condition.visible, Duration.ofSeconds(7));
             privateAccountElement.click();
         }
 
         public MainPage doEnterToAccountButtonWait() {
-            enterToAccountButton.shouldBe(visible, Duration.ofSeconds(7));
+            enterToAccountButton.shouldBe(Condition.visible, Duration.ofSeconds(7));
             enterToAccountButton.isDisplayed();
             return this;
         }
 
         public void enterToAccountButtonClick() {
-            enterToAccountButton.shouldBe(visible, Duration.ofSeconds(7));
+            enterToAccountButton.shouldBe(Condition.visible, Duration.ofSeconds(7));
             enterToAccountButton.isDisplayed();
             enterToAccountButton.click();
         }
@@ -101,14 +101,14 @@ public class MainPage {
 
         //wait for an order button
         public MainPage doOrderButtonWait() {
-            orderButton.shouldBe(visible, Duration.ofSeconds(7));
+            orderButton.shouldBe(Condition.visible, Duration.ofSeconds(7));
             return this;
         }
 
         public Boolean isOrderButtonVisible () {
-        orderButton.shouldBe(visible,Duration.ofSeconds(5));
+        orderButton.shouldBe(Condition.visible,Duration.ofSeconds(5));
         orderButton.isDisplayed();
-            return orderButton.is(visible);
+            return orderButton.is(Condition.visible);
         }
 
 

@@ -25,13 +25,13 @@
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
             <version>5.23.2</version>
-            <scope>test</scope>
+            <scope>main</scope>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-support</artifactId>
             <version>3.141.59</version>
-            <scope>test</scope>
+            <scope>main</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>

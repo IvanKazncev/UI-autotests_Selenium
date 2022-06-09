@@ -1,11 +1,11 @@
-package pageObject;
+package po;
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import java.time.Duration;
 import java.util.List;
-import static com.codeborne.selenide.Condition.visible;
 
 public class LoginPage {
 
@@ -67,14 +67,14 @@ public class LoginPage {
 
     //click on the stellar burgers wording
     public void stellarBurgersWordingClick() {
-        stellarBurgersWording.should(visible, Duration.ofSeconds(7));
+        stellarBurgersWording.should(Condition.visible, Duration.ofSeconds(7));
         stellarBurgersWording.isDisplayed();
         stellarBurgersWording.click();
     }
 
     public void waitStellarBurgersWording () {
         stellarBurgersWording.isDisplayed();
-        stellarBurgersWording.should(visible, Duration.ofSeconds(7));
+        stellarBurgersWording.should(Condition.visible, Duration.ofSeconds(7));
     }
 
     // click on the eye icon
@@ -84,26 +84,26 @@ public class LoginPage {
 
     // click on the restore password button
     public void restoreButtonClick(){
-        restoreButton.shouldBe(visible, Duration.ofSeconds(5));
+        restoreButton.shouldBe(Condition.visible, Duration.ofSeconds(5));
         restoreButton.isDisplayed();
         restoreButton.click();
     }
 
     //check if the incorrect pw message is shown up
     public SelenideElement incorrectPasswordAlert() {
-        incorrectPasswordMessage.shouldBe(visible, Duration.ofSeconds(7));
+        incorrectPasswordMessage.shouldBe(Condition.visible, Duration.ofSeconds(7));
         return incorrectPasswordMessage;
     }
 
     // click on registration link
     public void registrationLinkClick(){
-        registrationLink.shouldBe(visible, Duration.ofSeconds(7));
+        registrationLink.shouldBe(Condition.visible, Duration.ofSeconds(7));
         registrationLink.click();
     }
 
     //check if the exit word visible
     public Boolean isExitWordVisible() {
-        exitWord.shouldBe(visible, Duration.ofSeconds(7));
+        exitWord.shouldBe(Condition.visible, Duration.ofSeconds(7));
         return exitWord.isDisplayed();
     }
 
@@ -126,7 +126,7 @@ public class LoginPage {
 
     //execute a login procedure
     public void login (String emailName, String passwordName) {
-        enterButton.shouldBe(visible, Duration.ofSeconds(7));
+        enterButton.shouldBe(Condition.visible, Duration.ofSeconds(7));
         enterButton.isDisplayed();
         setEmail(emailName);
         setPassword(passwordName);

@@ -1,4 +1,5 @@
-package pageObject;
+package po;
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,7 +8,6 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.codeborne.selenide.Condition.visible;
 public class AccountProfilePage {
 
 
@@ -25,14 +25,14 @@ public class AccountProfilePage {
 
     //click on the stellar burgers wording
     public void  stellarBurgersWordingClick() {
-        stellarBurgersWording.should(visible, Duration.ofSeconds(7));
+        stellarBurgersWording.should(Condition.visible, Duration.ofSeconds(7));
         stellarBurgersWording.isDisplayed();
         stellarBurgersWording.click();
     }
 
     //click on the exit link
     public void exitLinkClick() {
-        exitLink.should(visible, Duration.ofSeconds(7));
+        exitLink.should(Condition.visible, Duration.ofSeconds(7));
         exitLink.isDisplayed();
         exitLink.click();
     }

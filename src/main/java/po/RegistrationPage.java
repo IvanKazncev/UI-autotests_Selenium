@@ -1,12 +1,11 @@
-package pageObject;
+package po;
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import java.time.Duration;
 import java.util.List;
-
-import static com.codeborne.selenide.Condition.visible;
 
 public class RegistrationPage {
 
@@ -34,7 +33,7 @@ public class RegistrationPage {
 
     //click on the Small enter button
     public void smallRegistrationButtonClick() {
-        smallEnterButton.shouldBe(visible, Duration.ofSeconds(7));
+        smallEnterButton.shouldBe(Condition.visible, Duration.ofSeconds(7));
         smallEnterButton.click();
     }
 
@@ -51,7 +50,7 @@ public class RegistrationPage {
 
     //execute a registration procedure
     public void registration (String name, String emailName, String passwordName) {
-        registrationButton.shouldBe(visible, Duration.ofSeconds(7));
+        registrationButton.shouldBe(Condition.visible, Duration.ofSeconds(7));
         setName(name);
         getAuthorizationFieldsListField().get(1).click();
         getAuthorizationFieldsListField().get(1).sendKeys(emailName);

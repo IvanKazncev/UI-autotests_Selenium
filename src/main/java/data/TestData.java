@@ -30,29 +30,23 @@ public class TestData {
 
         //"Getter for generating a random username")
         public String getUserName() {
-                String name = RandomStringUtils.randomAlphabetic(10);
-                return name;
+                return RandomStringUtils.randomAlphabetic(10);
         }
 
         //"Getter for generating a random email")
         public String getUserEmail() {
-                String email = RandomStringUtils.randomAlphabetic(10) + "@" + RandomStringUtils.randomAlphabetic(5)
+                return RandomStringUtils.randomAlphabetic(10) + "@" + RandomStringUtils.randomAlphabetic(5)
                         + "." + RandomStringUtils.randomAlphabetic(3);
-                return email;
         }
 
         //"Getter for generating a random password with customizable length")
         public String getUserPassword(int passwordLength) {
-                String password = RandomStringUtils.randomAlphabetic(passwordLength);
-                return password;
+                return RandomStringUtils.randomAlphabetic(passwordLength);
         }
 
         //"Getter for generating a random password")
         public String getUserPassword() {
-                String password = RandomStringUtils.randomAlphabetic(10);
-                return password;
+                return RandomStringUtils.randomAlphabetic(10);
         }
-
-
 
 }
