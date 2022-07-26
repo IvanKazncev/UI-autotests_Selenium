@@ -1,4 +1,4 @@
-﻿# UI-tests (E2E)
+﻿# UI-autotests (Selenium)
 
 link to the tested web-application - https://stellarburgers.nomoreparties.site/
 
@@ -8,8 +8,8 @@ page object models, test data are in src/test/java/tests
 
 the following libraries, testing frameworks, plugins, etc are used in tests:
 
-Selenide
-Allure
-Junit4
+- Selenide
+- Allure
+- Junit4
 
 and Page Object pattern
