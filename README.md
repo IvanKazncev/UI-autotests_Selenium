@@ -8,6 +8,7 @@ page object models, test data are in src/test/java/tests
 
 the following libraries, testing frameworks, plugins, etc are used in tests:
 
+- Selenium
 - Selenide
 - Allure
 - Junit4
